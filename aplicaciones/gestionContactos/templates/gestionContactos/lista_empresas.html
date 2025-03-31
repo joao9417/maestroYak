@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Empresas</title>
+</head>
+<body>
+    <h1>Lista de Empresas</h1>
+    <ul>
+        {% for empresa in empresas %}
+            <li>
+                {{ empresa.nombre_empresa }} (NIT: {{ empresa.nit_empresa }})
+                <a href="{% url 'editar_empresa' empresa.nit_empresa %}">Editar</a> |
+                <a href="{% url 'eliminar_empresa' empresa.nit_empresa %}" onclick="return confirm('¿Estás seguro de que deseas eliminar esta empresa?');">Eliminar</a>
+            </li>
+        {% empty %}
+            <li>No se encontraron empresas.</li>
+        {% endfor %}
+    </ul>
+    <a href="/agregar_empresa/">Agregar nueva empresa</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Contacto</title>
+</head>
+<body>
+    <h1>Agregar Contacto</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ contacto_form.as_p }}
+        {{ telefono_form.as_p }}
+        {{ email_form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="/lista_contactos/">Volver a la lista de contactos</a>
+</body>
+</html>
