@@ -1,0 +1,22 @@
+# Entorno virtual
+venv/
+.venv/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Base de datos SQLite
+*.sqlite3
+
+# Archivos de entorno
+.env
+.env.local
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# Static files (Django)
+staticfiles/
